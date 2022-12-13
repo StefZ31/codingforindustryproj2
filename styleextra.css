@@ -1,0 +1,402 @@
+
+
+/*---> COMIENZO CSS RESET <---*/
+:root {
+    --tipo-titular: 'Playfair Display', serif;
+    --tipo-principal: 'Inter', sans-serif;
+}
+* {
+    cursor:none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    vertical-align: baseline;
+}
+img {
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    object-fit: cover;
+    object-position: center center;
+}
+a {
+    display: block;
+    text-decoration: none; 
+    color: inherit;
+}
+video {
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    object-fit: cover;
+    object-position: center center;
+}
+p a {
+    display: inline;
+}
+
+li { list-style-type: none;}
+ul{list-style-type: none;}
+table, tr, td {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+h1,h2,h3,h4,h5,h6{
+    color: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+}
+form, button, input, textarea, select {
+    font-family: inherit;
+    font-size: inherit;
+    background-color: transparent;
+    display: flex;
+    color: inherit;
+}
+
+body{
+    font-family: var(--tipo-principal);
+    font-size: 100%;
+    min-height: 100vh;
+    background-color: var(--blanco);
+    color: white; 
+    font-smooth: always;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.cuadrado {
+    width:100%;
+}
+/*---> FIN CSS RESET <---*/
+img, figure{
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    object-fit: cover;
+    object-position: center center;
+}
+/*--------------*/
+.formas{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left:0;
+    background-color: rgb(0, 119, 99);
+    z-index: 1;
+    filter: blur(15px);
+}
+.formas .forma{
+    position: absolute;
+    width:70%;
+    height:70%;
+    animation: forma1 40s alternate infinite both;
+
+}
+.formas .forma1{
+    top: 0%;
+    left: 0%;
+}
+@keyframes forma1{
+    from{
+        transform: rotate(0deg) scale(3);
+    }
+    to{
+        transform: rotate(360deg) scale(3);
+    }
+}
+.formas .forma1 .path{
+    fill: rgb(0, 156, 156);
+}
+.formas .forma2{
+    top: 0%;
+    right: 0%;
+}
+.formas .forma2 .path{
+    fill: rgb(255, 0, 119);
+}
+.formas .forma3{
+    bottom:0%;
+    left:0%;
+}
+.formas .forma3 .path{
+    fill: rgb(0, 255, 115);
+}
+.formas .forma4{
+    bottom:0%;
+    right:0%;
+}
+.formas .forma4 .path{
+    fill: rgb(76, 0, 255);
+}
+/*START HEADER*/
+.header{
+    width: 100%;
+    min-height: 5em;
+    background: rgb(63, 63, 63, 0.4);
+
+    padding: 1em 2em;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    /*display: none;*/
+    position: relative;
+    z-index: 2;
+}
+.header .ul{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.header .li{
+    margin: 0 1em;
+}
+.nav{
+    font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+    font-style: bold;
+    font-weight: 550;
+    margin: 15px 55px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.nav .ul .li{
+    margin-top: 5px;
+    color: rgba(1,1,1,0.7);
+}
+
+.nav .ul .li .a {
+    font-weight: 350;
+    font-size: 1.5em;
+    transition: all 500ms;
+}
+    
+.nav .ul .li .a:hover {
+    font-size:30px;
+    font-weight: bold;
+    font-size-adjust: 20px;
+}
+.logonav{
+        width: 140px;
+}
+
+/*FIN HEADER*/
+.main{
+
+    margin: 0 0 1em;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+.seccion{
+    width: 100%;
+    min-height: 80vh;
+
+    margin: 1em 0;
+    padding: 2em;
+
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+.seccion .info{
+
+    font-size: 1.25em;
+    animation: aparecer1  2s ease 1 both;
+}
+@keyframes aparecer1{
+    from{opacity:0;
+    transform: translateY(100%);   
+    }
+    to{opacity:1;
+    transform: translateY(0%);      
+    }
+}
+.seccion .h2{
+    font-family: Tahoma, "Geneva", sans-serif;
+    font-size: 5em;
+    font-weight: 250;
+    letter-spacing: 10px;
+    line-height: 1em;
+    color: rgb(0, 0, 0); 
+    text-shadow: 2px 0 rgba(0, 0, 0, 0.3), -2px 0 rgba(0, 0, 0, 0.3), 0 2px rgba(255, 255, 255, 0.3), 0 -2px rgba(255, 255, 255, 0.3),
+    1px 1px rgba(0, 0, 0, 0.3), -1px -1px rgba(255, 255, 255, 0.3), 1px -1px rgba(255, 255, 255, 0.3), -1px 1px rgba(255, 255, 255, 0.3); ;
+    mix-blend-mode:multiply;
+}
+.seccion .h3{  
+    font-family: Baskerville, "Baskerville Old Face", "Goudy Old Style", Garamond, "Times New Roman", serif;;
+    font-size: 3.5em;
+    margin-top: 5%;
+    font-weight: 350;
+    font-style: italic;
+
+}
+
+.donate .p{
+    font-size: 1.5em;
+    margin: 15px;
+    color: white;
+    background-color: black;
+}
+.donate{
+    background: rgba(255,255,255,0.4);
+    color: black;
+    box-shadow: 0 0 5em 5em rgba(255,255,255,0.4);
+}
+.donate .h2{
+    margin: 0 0 5rem;
+    color: inherit;
+    font-style: italic;
+}
+.donatebutton{
+    background-color: #1d1d1d;
+    border-radius: 25%;
+    
+}
+.footer .rrss{
+    width: 100%;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1em;
+}
+.footer .svg{
+    width: 3em;
+    height: 3em;
+}
+.footer{
+    color: white;
+    padding: 2em 0;
+    text-align: center;
+    position: relative;
+    z-index: 3;
+}
+/*--Modificaciones específicas para cursor personalizado--*/
+.cursor {
+    width: 15px;
+    height: 15px;
+    border-radius: 40%;
+    border: 1px solid black;
+    transition: all 200ms ease;
+    position: fixed;
+    pointer-events: none;
+    left: 0;
+    top: 0;
+    transform: translate(calc(-50% + 5px), -20%);
+    z-index: 3;
+  }
+  
+  .cursor2 {
+    width: 10px;
+    height: 10px;
+    border-radius: 55%;
+    background-color: black;
+    opacity: .3;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    transition: width 0.3s, height 0.3s, opacity 0.3s;
+    z-index: 3;
+  }
+  
+  .hover {
+    background-color: white;
+    opacity: 1;
+    transition: opacity 0.5s, width 0.3s, height 0.3s ease;
+  }
+  
+  .cursorinnerhover {
+    width: 50px;
+    height: 50px;
+    opacity: .5;
+  }
+/*--Información Contacto--*/
+  .buttonsub{
+    position: relative;
+    font-size: 15px;
+    width: 100%;
+    background-color: #33FFAC;
+    text-decoration: none;
+    border: 17px solid transparent;
+    font-weight: bold;
+    border-radius: 80px;
+    margin: 25px;
+    cursor: pointer;
+}
+.container form{ 
+    width: 100%;
+    flex-direction: column;
+}
+form input{
+    height: 25%;
+    width: 100%; 
+    border: 0;
+    outline: none;
+    background:rgb(255, 255, 255);
+    padding: 25px;
+    margin: 25px;
+    color: rgb(49, 49, 49);
+    font-size: 20px;
+    border-radius: 25px;
+}
+form textarea{
+    width: 100%; 
+    border: 0;
+    outline: none;
+    background:rgb(255, 255, 255);
+    padding: 25px;
+    margin: 25px;
+    color: white;
+    font-size: 20px;
+    border-radius: 25px;
+}
+ 
+/*--Responsive focused para iPhone 6/7/8--*/
+  @media only screen and (max-width: 600px){
+    .header .h1{
+        margin-left: 5em;
+    }
+    .header .ul{
+        justify-content: center;
+        margin-left: 1em;
+    }
+    .nav{
+        position: relative;
+        display: inline-block;
+        width: 50%;
+
+    }
+    .nav .ul{
+        width: 100%;
+        text-align: center;
+
+    }
+    .nav .ul .li{
+        display: inline-block;
+        margin-top: 20px;
+        height:40px;
+
+    }
+    .seccion .h2{
+        font-size: 3em;
+    }
+    .seccion .h3{
+        margin-top: 1em;
+        font-size: 2em;
+    }
+    .seccion .ul .li{
+        margin-top: 1em;
+    }
+    .container{
+        margin-right: 3em;
+    }
+}
